@@ -17,6 +17,8 @@ function App() {
       correo: emailColaborador,
     };
     setColaboradores([...colaboradores, nuevoColaborador]);
+    setNombreColaborador("");
+    setEmailColaborador("");
   };
 
   const filtrarColaboradores = (search) => {
@@ -51,7 +53,8 @@ function App() {
       <br/>
       {colaboradoresFiltrados.map((colaborador) => {
         return ( <li>{colaborador.nombre}-{colaborador.correo}</li> );
-      })}</div>
+      })}
+      </div>
     </div>
   );
 }
